@@ -1,4 +1,3 @@
-
 // GAME_PIXEL_COUNT is the pixels on horizontal or vertical axis of the game board (SQUARE).
 const GAME_PIXEL_COUNT = 40;
 const SQUARE_OF_GAME_PIXEL_COUNT = Math.pow(GAME_PIXEL_COUNT, 2);
@@ -44,7 +43,7 @@ const DOWN_DIR = 40;
 // Set snake direction initially to right
 let snakeCurrentDirection = RIGHT_DIR;
 
-const changeDirection = newDirectionCode => {
+const changeDirection = (newDirectionCode) => {
   // Change the direction of the snake
   if (newDirectionCode == snakeCurrentDirection) return;
 
@@ -159,7 +158,7 @@ createFood();
 var moveSnakeInterval = setInterval(moveSnake, 80);
 
 // Call change direction function on keyboard key-down event:
-addEventListener("keydown", e => changeDirection(e.keyCode));
+addEventListener("keydown", (e) => changeDirection(e.keyCode));
 
 // ON SCREEN CONTROLLERS:
 const leftButton = document.getElementById("leftButton");
@@ -171,4 +170,3 @@ leftButton.onclick = () => changeDirection(LEFT_DIR);
 rightButton.onclick = () => changeDirection(RIGHT_DIR);
 upButton.onclick = () => changeDirection(UP_DIR);
 downButton.onclick = () => changeDirection(DOWN_DIR);
-view rawsnake_game_full.js hosted with ❤ by GitHub
