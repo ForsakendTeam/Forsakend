@@ -1,194 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Made by Forsakend INC" name="author">
-
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <meta name="viewport" content="width=device-width,initial-scale=1" />    
-    
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon">
-
-  <link href="./main.3f6952e4.css" rel="stylesheet"></head>
-
-
-<body class="minimal">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-
-
-<header>
-  <nav class="navbar  navbar-fixed-top">
-    <div class="container">
-
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="Home Page">01 : Home Page</a></li>
-          <li><a href="./About-Us.html" title="About Page">02 : About Us</a></li>
-          <li><a href="./Merchandise.html" title="Merchandise Page">03 : Merchandise</a></li>
-          <li><a href="./Games.html" title="Games Page">04 : Inspiring Games</a></li>            
-          <li><a href="./Forum.html" title="Forums Page">05 : Forum</a></li>
-          <li><a href="./Contact-Us.html" title="Contact Page">06 : Contact Us</a></li>
-
-          </ul>
-        </div>
-  </nav>
-</header> 
-    </body>
-     
-
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    
 body {
-  background-color: darkslategrey;
-  text-align: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* GAME BOARD STYLES */
-#gameContainer {
-  /*
-	width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
-	because it is used in calculation in the jscript.js file
-	*/
-  width: 40vw;
-  height: 40vw;
-  margin: 2vw auto;
-  background-color: #0c1021;
-  border: solid 10px slategrey;
-  border-radius: 10px;
-
-  -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
 
-.gameBoardPixel {
-  /* background-color: slategrey; */
-  /*
-	width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
-	because it is used in calculation in the jscript.js file
-	*/
-  width: 1vw;
-  height: 1vw;
-  border-radius: 10px;
+.topnav a {
   float: left;
-}
-/* GAME BOARD STYLES END*/
-
-/* SNAKE STYLES */
-.snakeBodyPixel {
-  background-color: #fd6401;
-  box-shadow: 0 0 5px #fd6401;
-}
-/* SNAKE STYLES END*/
-
-/* FOOD STYLES */
-.food {
-  background-color: #68e768;
-}
-/* FOOD STYLES END*/
-
-/* SCORE STYLES */
-#scoreContainer {
-  width: 40vw;
-  display: flex;
-  margin: auto;
-  justify-content: space-around;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.scoreBoard {
-  border-radius: 10px;
-  border: solid 5px slategrey;
-  color: dimgray;
-  background-color: #0c1021;
-  display: inline-block;
-  padding: 1vw;
-  width: 40%;
-
-  -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
-}
-/* SCORE STYLES END */
-
-/* Hide #onScreenControllers on desktop */
-#onScreenControllers {
-  display: none;
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-.developerDetails {
-  margin-top: 2vw;
-  display: flex;
-  flex-direction: column;
-  color: #0c1021;
-  font-family: monospace;
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
 }
+</style>
+</head>
+<body>
 
-.developerDetails a {
-  color: #0c1021;
-}
+<div class="topnav">
+          <a href="./index.html" title="Home Page">01 : Home Page</a>
+          <a href="./About-Us.html" title="About Page">02 : About Us</a>
+          <a href="./Merchandise.html" title="Merchandise Page">03 : Merchandise</a>
+          <a href="./Games.html" title="Games Page">04 : Inspiring Games</a>         
+          <a href="./Forum.html" title="Forums Page">05 : Forum</a>
+          <a href="./Contact-Us.html" title="Contact Page">06 : Contact Us</a>
+</div>
 
-@media only screen and (max-width: 768px) {
-  /* MOBILE */
-  #gameContainer {
-    width: 80vw;
-    height: 80vw;
-  }
-
-  .gameBoardPixel {
-    width: 2vw;
-    height: 2vw;
-  }
-
-  #scoreContainer {
-    width: 80vw;
-  }
-
-  #onScreenControllers {
-    width: 80vw;
-    margin: 5vw auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  #onScreenControllers > div {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #onScreenControllers button {
-    background-color: transparent;
-    height: 20vw;
-    width: 20vw;
-    font-size: 10vw;
-    border: none;
-  }
-
-  #onScreenControllers button:focus {
-    outline: none;
-  }
-
-  #onScreenControllers button:active {
-    background-color: slategray;
-  }
-}    
+</body>
+     
+<br>
     
-    </style>
     <head lang="en">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Games</title>
     <!-- Link our styles from snake_game.css -->
-    <link rel="stylesheet" type="text/css" href="snake_game.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body>
     <!-- #gameContainer is the main game board-->
