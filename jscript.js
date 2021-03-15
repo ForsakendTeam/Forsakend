@@ -65,7 +65,7 @@ const changeDirection = (newDirectionCode) => {
 let currentSnakeHeadPosition = SQUARE_OF_GAME_PIXEL_COUNT / 2;
 
 // Initial snake length
-let snakeLength = 1000;
+let snakeLength = 1;
 
 // Move snake continously by calling this function repeatedly :
 const moveSnake = () => {
