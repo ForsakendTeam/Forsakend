@@ -1,64 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Made by Forsakend INC" name="author">
-
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <meta name="viewport" content="width=device-width,initial-scale=1" />    
-    
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon">
-
-<link href="./main.3f6952e4.css" rel="stylesheet"></head>
-    
-
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Snake v8</title>
     <!-- Link our styles from main.css -->
-    <link rel="stylesheet" type="text/css" href="main.css" />    
-
-<body class="minimal">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-
-
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-inverse">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="Home Page">01 : Home Page</a></li>
-          <li><a href="./About-Us.html" title="About Page">02 : About Us</a></li>
-          <li><a href="./Merchandise.html" title="Merchandise Page">03 : Merchandise</a></li>
-          <li><a href="./Games.html" title="Games Page">04 : Inspiring Games</a></li>            
-          <li><a href="./Forum.html" title="Forums Page">05 : Forum</a></li>
-          <li><a href="./Contact-Us.html" title="Contact Page">06 : Contact Us</a></li>
-
-
-      </div> 
-    </div>
-  </nav>
-</header> 
-    </header>
-    </body>
-    
-
-
-
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
   <body>
     <!-- #gameContainer is the main game board-->
     <div id="gameContainer"></div>
@@ -71,18 +19,28 @@
 
     <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
     <div id="onScreenControllers">
-      <button id="leftButton">a</button>
+      <button id="leftButton">◀️</button>
       <div>
-        <button id="upButton">w</button>
-        <button id="downButton">s</button>
+        <button id="upButton">🔼</button>
+        <button id="downButton">🔽</button>
       </div>
-      <button id="rightButton">d</button>
+      <button id="rightButton">▶️</button>
     </div>
 
+    <div class="developerDetails">
+      <div>
+        Developed by
+        <a href="https://rabiroshan.com/" target="_blank">Rabi Roshan.</a>
+      </div>
+      <div>
+        View source code on
+        <a href="https://github.com/RabiRoshan/snake_game" target="_blank"
+          >GitHub.</a
+        >
+      </div>
     </div>
   </body>
 
   <!-- #Load our jscript.js containing the game logic -->
   <script src="jscript.js"></script>
 </html>
-          
