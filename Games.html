@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,39 +44,59 @@ body {
 </div>
 
 </body>
-     
+</html>
+
 <br>
     
-    <head lang="en">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Games</title>
-    <!-- Link our styles from snake_game.css -->
-    <link rel="stylesheet" type="text/css" href="main.css" />
-  </head>
-  <body>
-    <!-- #gameContainer is the main game board-->
-    <div id="gameContainer"></div>
 
-    <!-- #scoreContainer contains the scores  -->
-    <div id="scoreContainer">
-      <div class="scoreBoard">Food: <span id="pointsEarned">0</span></div>
-      <div class="scoreBoard">Blocks: <span id="blocksTravelled">0</span></div>
-    </div>
+<script 
+src="testing.js">
+</script>
+<link href="testing.css" rel="stylesheet">
 
-    <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
-    <div id="onScreenControllers">
-      <button id="leftButton">a</button>
-      <div>
-        <button id="upButton">w</button>
-        <button id="downButton">s</button>
-      </div>
-      <button id="rightButton">d</button>
-    </div>
+<header class="wrap">
+  <h1>Snake</h1>
+  <p class="score">Score: <span id="score_value">0</span></p>
+</header>
 
-  </body>
+<canvas class="wrap" id="snake" width="320" height="320" tabindex="1"></canvas>
 
-  <!-- #Load our jscript.js containing the game logic -->
-  <script src="jscript.js"></script>
-    
-</html>
+<!-- Game Over Screen -->
+<div id="gameover">
+  <h2>Game Over</h2>
+  <p>press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin a</p>
+  <a id="newgame_gameover">new game</a>
+  <a id="setting_gameover">settings</a>
+</div>
+
+<!-- Setting screen -->
+<div id="setting">
+  <h2>Settings</h2>
+
+  <a id="newgame_setting">new game</a>
+
+  <p>Speed:
+    <input id="speed1" type="radio" name="speed" value="120" checked/>
+    <label for="speed1">Slow</label>
+    <input id="speed2" type="radio" name="speed" value="75" />
+    <label for="speed2">Normal</label>
+    <input id="speed3" type="radio" name="speed" value="35" />
+    <label for="speed3">Fast</label>
+  </p>
+
+  <p>Wall:
+    <input id="wallon" type="radio" name="wall" value="1" checked/>
+    <label for="wallon">On</label>
+    <input id="walloff" type="radio" name="wall" value="0" />
+    <label for="walloff">Off</label>
+  </p>
+
+</div>
+
+<!-- Main Menu Screen -->
+<div id="menu">
+  <h2>Snake</h2>
+
+  <a id="newgame_menu">new game</a>
+  <a id="setting_menu">settings</a>
+</div>
