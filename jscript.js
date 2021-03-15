@@ -35,10 +35,10 @@ const createFood = () => {
 /// THE SNAKE:
 
 // Direction codes (Keyboard key codes for arrow keys):
-const LEFT_DIR = 37;
-const UP_DIR = 38;
-const RIGHT_DIR = 39;
-const DOWN_DIR = 40;
+const LEFT_DIR = 65;
+const UP_DIR = 87;
+const RIGHT_DIR = 68;
+const DOWN_DIR = 83;
 
 // Set snake direction initially to right
 let snakeCurrentDirection = RIGHT_DIR;
