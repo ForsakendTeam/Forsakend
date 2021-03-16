@@ -40,14 +40,6 @@ const UP_DIR = 87;
 const RIGHT_DIR = 68;
 const DOWN_DIR = 83;
 
-for (var i = 0; i < snake.length; i++) {
-  if (!i) {
-    ctx.drawImage(img, snake[i].x * 10, snake[i].y * 10);
-  } else {
-    activeDot(snake[i].x, snake[i].y);
-  }
-}
-
 // Set snake direction initially to right
 let snakeCurrentDirection = RIGHT_DIR;
 
