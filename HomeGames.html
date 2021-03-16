@@ -79,7 +79,7 @@ body {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  left: 25px;
+  right: 25px;
   font-size: 36px;
   margin-left: 50px;
 }
@@ -90,3 +90,26 @@ body {
 }
 </style>
 </head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <li><a href="./Games.html">Snake</a></li>
+  <li><a href="#">Word Sweeper</a></li>
+  <li><a href="#">Typer</a></li>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Games</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+</body>
+</html> 
