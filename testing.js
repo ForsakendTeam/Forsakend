@@ -1,4 +1,4 @@
-(function () {
+(function() {
   /////////////////////////////////////////////////////////////
 
   // Canvas & Context
@@ -10,6 +10,7 @@
   var snake_dir;
   var snake_next_dir;
   var snake_speed;
+
   // Food
   var food = {
     x: 0,
@@ -38,69 +39,65 @@
 
   /////////////////////////////////////////////////////////////
 
-  var activeDot = function (x, y) {
+  var activeDot = function(x, y) {
     ctx.fillStyle = "#FFFFFF";
     ctx.fillRect(x * 10, y * 10, 10, 10);
-  };
-
-  var img = new Image(); // Create new img element
-  img.src =
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA21BMVEXoTTvqTTzpUD7nTjzmTTvrUkDpTjzmSznUPSrVPCrnTDrSOSfTOizlTDrvoJnoqJ/pVkTmU0P5urH1p53mSTjjPiv7nZF0f4NZaGvpn5b9s6qDl5iira/+nI/jPirkPyz7lop+iYtleHzsnpT7raOTpqqqtbf4lovnSjf0lorylonpSDbnTDj5oZf2mIzlSDXkOyjIY1vrd2rrWEbZZ1zYQDLsTTroTz/lRjPalY7+///////j19fVSz7tTjvmTjntRjPialzZhH3sVkXsSzniRTTYQTDmSTbmTT3qb45jAAAAAWJLR0Q7OQ70bAAAAAd0SU1FB+QEDw4AEYzMSFoAAABvSURBVAjXY2BgZGJiZmFlZWNgYGDn4GTn4ubhBTJZ+PgFBIWERdgYRMXEJSSlpGVk5RjkFRSVlFVU1dTlGRg0NLW0dXT19JkZGNgMDI2MTUzNgNrMLSytrG1s7eyBbGYHRydnFwYwYHN1c/dgYAAAtKsKjnGo4BwAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDQtMTVUMTQ6MDA6MTctMDQ6MDAVi7z/AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTA0LTE1VDE0OjAwOjE3LTA0OjAwZNYEQwAAAABJRU5ErkJggg==";
-
-  for (var i = 0; i < snake.length; i++) {
-    if (!i) {
-      ctx.drawImage(img, snake[i].x * 10, snake[i].y * 10);
-    } else {
-      activeDot(snake[i].x, snake[i].y);
-    }
   }
+
+
   /////////////////////////////////////////////////////////////
 
-  var changeDir = function (key) {
+  var changeDir = function(key) {
+
     if (key == 38 && snake_dir != 2) {
       snake_next_dir = 0;
     } else {
+
       if (key == 39 && snake_dir != 3) {
         snake_next_dir = 1;
       } else {
+
         if (key == 40 && snake_dir != 0) {
           snake_next_dir = 2;
         } else {
+
           if (key == 37 && snake_dir != 1) {
             snake_next_dir = 3;
           }
         }
       }
     }
-  };
+
+  }
 
   /////////////////////////////////////////////////////////////
 
-  var addFood = function () {
-    food.x = Math.floor(Math.random() * (canvas.width / 10 - 1));
-    food.y = Math.floor(Math.random() * (canvas.height / 10 - 1));
+  var addFood = function() {
+    food.x = Math.floor(Math.random() * ((canvas.width / 10) - 1));
+    food.y = Math.floor(Math.random() * ((canvas.height / 10) - 1));
     for (var i = 0; i < snake.length; i++) {
       if (checkBlock(food.x, food.y, snake[i].x, snake[i].y)) {
         addFood();
       }
     }
-  };
+  }
 
   /////////////////////////////////////////////////////////////
 
-  var checkBlock = function (x, y, _x, _y) {
-    return x == _x && y == _y ? true : false;
-  };
+  var checkBlock = function(x, y, _x, _y) {
+    return (x == _x && y == _y) ? true : false;
+  }
 
   /////////////////////////////////////////////////////////////
 
-  var altScore = function (score_val) {
+  var altScore = function(score_val) {
     ele_score.innerHTML = String(score_val);
-  };
+  }
 
   /////////////////////////////////////////////////////////////
 
-  var mainLoop = function () {
+  var mainLoop = function() {
+
     var _x = snake[0].x;
     var _y = snake[0].y;
     snake_dir = snake_next_dir;
@@ -127,18 +124,14 @@
       y: _y
     });
 
+
     // --------------------
 
     // Wall
 
     if (wall == 1) {
       // On
-      if (
-        snake[0].x < 0 ||
-        snake[0].x == canvas.width / 10 ||
-        snake[0].y < 0 ||
-        snake[0].y == canvas.height / 10
-      ) {
+      if (snake[0].x < 0 || snake[0].x == canvas.width / 10 || snake[0].y < 0 || snake[0].y == canvas.height / 10) {
         showScreen(3);
         return;
       }
@@ -146,16 +139,16 @@
       // Off
       for (var i = 0, x = snake.length; i < x; i++) {
         if (snake[i].x < 0) {
-          snake[i].x = snake[i].x + canvas.width / 10;
+          snake[i].x = snake[i].x + (canvas.width / 10);
         }
         if (snake[i].x == canvas.width / 10) {
-          snake[i].x = snake[i].x - canvas.width / 10;
+          snake[i].x = snake[i].x - (canvas.width / 10);
         }
         if (snake[i].y < 0) {
-          snake[i].y = snake[i].y + canvas.height / 10;
+          snake[i].y = snake[i].y + (canvas.height / 10);
         }
         if (snake[i].y == canvas.height / 10) {
-          snake[i].y = snake[i].y - canvas.height / 10;
+          snake[i].y = snake[i].y - (canvas.height / 10);
         }
       }
     }
@@ -201,14 +194,15 @@
     activeDot(food.x, food.y);
 
     // Debug
-    //document.getElementById("debug").innerHTML = snake_dir + " " + snake_next_dir + " " + snake[0].x + " " + snake[0].y;
+    //document.getElementById("debug").innerHTML = snake_dir + " " + snake_next_dir + " " + snake[0].x + " " + snake[0].y;    
 
     setTimeout(mainLoop, snake_speed);
-  };
+  }
 
   /////////////////////////////////////////////////////////////
 
-  var newGame = function () {
+  var newGame = function() {
+
     showScreen(0);
     screen_snake.focus();
 
@@ -227,12 +221,13 @@
 
     addFood();
 
-    canvas.onkeydown = function (evt) {
+    canvas.onkeydown = function(evt) {
       evt = evt || window.event;
       changeDir(evt.keyCode);
-    };
+    }
     mainLoop();
-  };
+
+  }
 
   /////////////////////////////////////////////////////////////
 
@@ -240,12 +235,12 @@
   // 150 = slow
   // 100 = normal
   // 50 = fast
-  var setSnakeSpeed = function (speed_value) {
+  var setSnakeSpeed = function(speed_value) {
     snake_speed = speed_value;
-  };
+  }
 
   /////////////////////////////////////////////////////////////
-  var setWall = function (wall_value) {
+  var setWall = function(wall_value) {
     wall = wall_value;
     if (wall == 0) {
       screen_snake.style.borderColor = "#606060";
@@ -253,7 +248,7 @@
     if (wall == 1) {
       screen_snake.style.borderColor = "#FFFFFF";
     }
-  };
+  }
 
   /////////////////////////////////////////////////////////////
 
@@ -261,8 +256,9 @@
   // 1 for the main menu
   // 2 for the settings screen
   // 3 for the game over screen
-  var showScreen = function (screen_opt) {
+  var showScreen = function(screen_opt) {
     switch (screen_opt) {
+
       case 0:
         screen_snake.style.display = "block";
         screen_menu.style.display = "none";
@@ -291,11 +287,12 @@
         screen_gameover.style.display = "block";
         break;
     }
-  };
+  }
 
   /////////////////////////////////////////////////////////////
 
-  window.onload = function () {
+  window.onload = function() {
+
     canvas = document.getElementById("snake");
     ctx = canvas.getContext("2d");
 
@@ -319,20 +316,20 @@
 
     // --------------------
 
-    button_newgame_menu.onclick = function () {
+    button_newgame_menu.onclick = function() {
       newGame();
     };
-    button_newgame_gameover.onclick = function () {
+    button_newgame_gameover.onclick = function() {
       newGame();
     };
-    button_newgame_setting.onclick = function () {
+    button_newgame_setting.onclick = function() {
       newGame();
     };
-    button_setting_menu.onclick = function () {
+    button_setting_menu.onclick = function() {
       showScreen(2);
     };
-    button_setting_gameover.onclick = function () {
-      showScreen(2);
+    button_setting_gameover.onclick = function() {
+      showScreen(2)
     };
 
     setSnakeSpeed(150);
@@ -345,7 +342,7 @@
 
     // speed
     for (var i = 0; i < speed_setting.length; i++) {
-      speed_setting[i].addEventListener("click", function () {
+      speed_setting[i].addEventListener("click", function() {
         for (var i = 0; i < speed_setting.length; i++) {
           if (speed_setting[i].checked) {
             setSnakeSpeed(speed_setting[i].value);
@@ -356,7 +353,7 @@
 
     // wall
     for (var i = 0; i < wall_setting.length; i++) {
-      wall_setting[i].addEventListener("click", function () {
+      wall_setting[i].addEventListener("click", function() {
         for (var i = 0; i < wall_setting.length; i++) {
           if (wall_setting[i].checked) {
             setWall(wall_setting[i].value);
@@ -365,13 +362,14 @@
       });
     }
 
-    document.onkeydown = function (evt) {
+    document.onkeydown = function(evt) {
       if (screen_gameover.style.display == "block") {
         evt = evt || window.event;
         if (evt.keyCode == 32) {
           newGame();
         }
       }
-    };
-  };
+    }
+  }
+
 })();
