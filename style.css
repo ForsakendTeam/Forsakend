@@ -1,5 +1,5 @@
 body {
-  background-color: #fe9801;
+  background-color: azure;
   color: black;
   text-align: center;
 }
@@ -65,7 +65,7 @@ body {
   margin: 15px;
   padding: 20px;
   border: 0px;
-  box-shadow: black 5px 8px 5px;
+  box-shadow: gold 5px 8px 5px;
 }
 
 .incorrect_char {
