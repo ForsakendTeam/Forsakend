@@ -3,12 +3,12 @@ let TIME_LIMIT = 60;
 
 // define quotes to be used
 let quotes_array = [
-  "Push yourself, because no one else is going to do it for you.",
-  "Failure is the condiment that gives success its flavor.",
-  "Wake up with determination. Go to bed with satisfaction.",
-  "It's going to be hard, but hard does not mean impossible.",
-  "Learning never exhausts the mind.",
-  "The only way to do great work is to love what you do."
+  "Life is a Journey, so Live it!",
+  "We were born into this world alone and we will die alone tis just apart of life so live happy and know that every second that passes may be your last",
+  "More sweat in the gym means less blood in the ring! So you must always be ready for whatever task lies ahead because if you fail to prepare then you must prepare to fail",
+  "True success requires an arduous journey by man",
+  "A man who rejects change never takes opportunity, but a man who exhibits Adaptability reaches true success. A man who is unsuccessful lives in fear.",
+  "Be strong, know who you are, no be shame, stand up, e ala e.","Be calm, Be strong, Be curious for your destiny holds many mysteries... Embody the trials that await your journey ahead with conviction. With that intern you will succeed!","Trust in yourself, don't hide your shadows, and embrace them!","For one to show true determination, one cannot be afraid of taking risks. Without risks, man would not be where we are today!"
 ];
 
 // selecting required elements
