@@ -1,0 +1,33 @@
+.writer {
+	position:absolute;
+	opacity:0;
+	text-align:left;
+	white-space:nowrap;
+	overflow:hidden;
+}
+#para1 {
+	position:absolute;	
+	top:10%;
+	left:35%;	
+    font-size:20px;
+    font-family:"Trajan Pro", Times;
+    height:95vh;
+	padding:4em;
+	color:rgb(255,255,255);
+}
+#para2 {
+	position:absolute;	
+	top:60%;
+	left:42%;	
+    font-size:20px;
+    font-family:"Trajan Pro", Times;
+    height:95vh;
+	padding:4em;
+	color:rgb(255,255,255);
+}
+@keyframes charAnim {
+	/* ADJUST THESE VALUES FOR FADE CONTROL */
+	0% {opacity:0;}
+	35% {opacity:1;}
+	100% {opacity:0.5;}
+}
