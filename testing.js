@@ -31,7 +31,8 @@
   var screen_howtoplay;    
   var button_newgame_menu;
   var button_newgame_setting;
-  var button_newgame_gameover;  
+  var button_newgame_gameover;
+  var button_newgame_howtoplay;    
   var button_setting_menu;
   var button_setting_gameover;     
   var ele_score;
@@ -319,7 +320,7 @@
     // Buttons
     button_newgame_menu = document.getElementById("newgame_menu");
     button_newgame_setting = document.getElementById("newgame_setting");
-    button_howtoplay = document.getElementById("howtoplay");      
+    button_newgame_howtoplay = document.getElementById("newgame_howtoplay");      
     button_setting_menu = document.getElementById("setting_menu");
     button_setting_gameover = document.getElementById("setting_gameover");    
 
@@ -345,8 +346,8 @@
     button_setting_gameover.onclick = function() {
       showScreen(2)
     };
-    button_howtoplay.onclick = function() {
-      showScreen(4);
+    button_newgame_howtoplay.onclick = function() {
+      showScreen();
     };          
     setSnakeSpeed(150);
     setWall(1);
