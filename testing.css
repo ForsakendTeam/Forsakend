@@ -204,15 +204,16 @@ h1 {
   font-size: 20px;
     
 }
+
 #howtoplay h2 {
   margin-bottom: 15px;
 }
 
-#setting input {
+#howtoplay input {
   display: none;
 }
 
-#setting label {
+#howtoplay label {
   cursor: pointer;
 }
 
