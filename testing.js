@@ -265,8 +265,7 @@
       case 0:
         screen_snake.style.display = "block";
         screen_menu.style.display = "none";
-        screen_setting.style.display = "none";
-        screen_howtoplay.style.display = "none";    
+        screen_setting.style.display = "none";   
         screen_gameover.style.display = "none";
         break;
 
@@ -281,8 +280,7 @@
       case 2:
         screen_snake.style.display = "none";
         screen_menu.style.display = "none";
-        screen_setting.style.display = "block";
-        screen_howtoplay.style.display = "none";     
+        screen_setting.style.display = "block";   
         screen_gameover.style.display = "none";
         break;
 
@@ -290,16 +288,9 @@
         screen_snake.style.display = "none";
         screen_menu.style.display = "none";
         screen_setting.style.display = "none";
-        screen_howtoplay.style.display = "block";     
-        screen_gameover.style.display = "none";
-        break;
-      case 4:
-        screen_snake.style.display = "none";
-        screen_menu.style.display = "none";
-        screen_setting.style.display = "none";
         screen_howtoplay.style.display = "none";     
         screen_gameover.style.display = "block";
-        break;            
+        break;        
     }
   }
 
@@ -320,7 +311,6 @@
     // Buttons
     button_newgame_menu = document.getElementById("newgame_menu");
     button_newgame_setting = document.getElementById("newgame_setting");
-    button_newgame_gameover = document.getElementById("newgame_howtoplay");
     button_setting_menu = document.getElementById("setting_menu");
     button_setting_gameover = document.getElementById("setting_gameover");
     button_setting_howtoplay = document.getElementById("setting_howtoplay");  
