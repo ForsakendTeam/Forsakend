@@ -31,11 +31,10 @@
   var screen_howtoplay;    
   var button_newgame_menu;
   var button_newgame_setting;
-  var button_newgame_gameover;  
-  var button_newgame_howtoplay;      
+  var button_newgame_gameover;
   var button_setting_menu;
-  var button_setting_gameover;   
-  var button_howtoplay_menu;  
+  var button_setting_gameover;
+  var button_howtoplay_menu;    
   var ele_score;
   var speed_setting;
   var wall_setting;
@@ -265,41 +264,41 @@
       case 0:
         screen_snake.style.display = "block";
         screen_menu.style.display = "none";
-        screen_setting.style.display = "none";   
+        screen_setting.style.display = "none";
         screen_gameover.style.display = "none";
-        screen_howtoplay.style.display = "none";       
+        screen_howtoplay.style.display = "none";    
         break;
 
       case 1:
         screen_snake.style.display = "none";
         screen_menu.style.display = "block";
-        screen_setting.style.display = "none";  
+        screen_setting.style.display = "none";
         screen_gameover.style.display = "none";
-        screen_howtoplay.style.display = "none";       
+        screen_howtoplay.style.display = "none";    
         break;
 
       case 2:
         screen_snake.style.display = "none";
         screen_menu.style.display = "none";
-        screen_setting.style.display = "block";   
+        screen_setting.style.display = "block";
         screen_gameover.style.display = "none";
-        screen_howtoplay.style.display = "none";       
+        screen_howtoplay.style.display = "none";    
         break;
 
       case 3:
         screen_snake.style.display = "none";
         screen_menu.style.display = "none";
-        screen_setting.style.display = "none";  
+        screen_setting.style.display = "none";
         screen_gameover.style.display = "block";
-        screen_howtoplay.style.display = "none";       
+        screen_howtoplay.style.display = "none";    
         break;
       case 4:
         screen_snake.style.display = "none";
         screen_menu.style.display = "none";
-        screen_setting.style.display = "none";  
+        screen_setting.style.display = "none";
         screen_gameover.style.display = "none";
         screen_howtoplay.style.display = "block";    
-        break;           
+        break;        
     }
   }
 
@@ -320,10 +319,10 @@
     // Buttons
     button_newgame_menu = document.getElementById("newgame_menu");
     button_newgame_setting = document.getElementById("newgame_setting");
-    button_newgame_howtoplay = document.getElementById("newgame_howtoplay");  
+    button_newgame_gameover = document.getElementById("newgame_gameover");
     button_setting_menu = document.getElementById("setting_menu");
-    button_setting_gameover = document.getElementById("setting_gameover");  
-    button_howtoplay_menu = document.getElementById("howtoplay_menu");
+    button_setting_gameover = document.getElementById("setting_gameover");
+    button_howtoplay_menu = document.getElementById("howtoplay_menu");  
 
     // etc
     ele_score = document.getElementById("score_value");
@@ -341,18 +340,16 @@
     button_newgame_setting.onclick = function() {
       newGame();
     };
-    button_newgame_howtoplay.onclick = function() {
-      newGame();
-    };  
     button_setting_menu.onclick = function() {
       showScreen(2);
-    };  
+    };
     button_setting_gameover.onclick = function() {
       showScreen(2)
     };
     button_howtoplay_menu.onclick = function() {
-      showScreen("howtoplay");
-    };      
+      showScreen(4)
+    };  
+
     setSnakeSpeed(150);
     setWall(1);
 
