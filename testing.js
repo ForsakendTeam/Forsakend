@@ -339,16 +339,16 @@
     };
     button_newgame_setting.onclick = function() {
       newGame();
-    };     
+    };
+    button_newgame_howtoplay.onclick = function() {
+      newGame();
+    };         
     button_setting_menu.onclick = function() {
       showScreen(2);
     };  
     button_setting_gameover.onclick = function() {
       showScreen(2)
-    };
-    button_newgame_howtoplay.onclick = function() {
-      showScreen();
-    };          
+    };         
     setSnakeSpeed(150);
     setWall(1);
 
