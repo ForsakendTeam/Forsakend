@@ -32,10 +32,10 @@
   var button_newgame_menu;
   var button_newgame_setting;
   var button_newgame_gameover;  
+  var button_newgame_howtoplay;      
   var button_setting_menu;
   var button_setting_gameover;   
-  var button_howtoplay_menu;
-  var button_howtoplay_gameover;  
+  var button_howtoplay_menu;  
   var ele_score;
   var speed_setting;
   var wall_setting;
@@ -259,7 +259,6 @@
   // 1 for the main menu
   // 2 for the settings screen
   // 3 for the game over screen
-  // 4 for the howtoplay screen  
   var showScreen = function(screen_opt) {
     switch (screen_opt) {
 
@@ -268,7 +267,7 @@
         screen_menu.style.display = "none";
         screen_setting.style.display = "none";   
         screen_gameover.style.display = "none";
-        screen_howtoplay.style.display = "none";    
+        screen_howtoplay.style.display = "none";       
         break;
 
       case 1:
@@ -293,14 +292,14 @@
         screen_setting.style.display = "none";  
         screen_gameover.style.display = "block";
         screen_howtoplay.style.display = "none";       
-        break;    
+        break;
       case 4:
         screen_snake.style.display = "none";
         screen_menu.style.display = "none";
         screen_setting.style.display = "none";  
         screen_gameover.style.display = "none";
-        screen_howtoplay.style.display = "block";            
-        break;            
+        screen_howtoplay.style.display = "block";    
+        break;           
     }
   }
 
@@ -320,11 +319,11 @@
 
     // Buttons
     button_newgame_menu = document.getElementById("newgame_menu");
-    button_newgame_setting = document.getElementById("newgame_setting");    
+    button_newgame_setting = document.getElementById("newgame_setting");
+    button_newgame_howtoplay = document.getElementById("newgame_howtoplay");  
     button_setting_menu = document.getElementById("setting_menu");
     button_setting_gameover = document.getElementById("setting_gameover");  
     button_howtoplay_menu = document.getElementById("howtoplay_menu");
-    button_howtoplay_gameover = document.getElementById("howtoplay_gameover");    
 
     // etc
     ele_score = document.getElementById("score_value");
@@ -341,7 +340,10 @@
     };
     button_newgame_setting.onclick = function() {
       newGame();
-    };       
+    };
+    button_newgame_howtoplay.onclick = function() {
+      newGame();
+    };  
     button_setting_menu.onclick = function() {
       showScreen(2);
     };  
@@ -349,10 +351,7 @@
       showScreen(2)
     };
     button_howtoplay_menu.onclick = function() {
-      showScreen(2);
-    };  
-    button_howtoplay_gameover.onclick = function() {
-      showScreen(2)
+      showScreen("howtoplay");
     };      
     setSnakeSpeed(150);
     setWall(1);

@@ -216,8 +216,3 @@ h1 {
 #howtoplay label {
   cursor: pointer;
 }
-
-#howtoplay input:checked+label {
-  background-color: #FFF;
-  color: #000;
-}
