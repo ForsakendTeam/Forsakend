@@ -33,8 +33,7 @@
   var button_newgame_setting;
   var button_newgame_gameover;  
   var button_setting_menu;
-  var button_setting_gameover;
-  var button_setting_howtoplay;      
+  var button_setting_gameover;     
   var ele_score;
   var speed_setting;
   var wall_setting;
@@ -267,6 +266,7 @@
         screen_menu.style.display = "none";
         screen_setting.style.display = "none";   
         screen_gameover.style.display = "none";
+        screen_howtoplay.style.display = "none";    
         break;
 
       case 1:
@@ -274,6 +274,7 @@
         screen_menu.style.display = "block";
         screen_setting.style.display = "none";  
         screen_gameover.style.display = "none";
+        screen_howtoplay.style.display = "none";       
         break;
 
       case 2:
@@ -281,6 +282,7 @@
         screen_menu.style.display = "none";
         screen_setting.style.display = "block";   
         screen_gameover.style.display = "none";
+        screen_howtoplay.style.display = "none";       
         break;
 
       case 3:
@@ -288,6 +290,7 @@
         screen_menu.style.display = "none";
         screen_setting.style.display = "none";  
         screen_gameover.style.display = "block";
+        screen_howtoplay.style.display = "none";       
         break;    
       case 4:
         screen_snake.style.display = "none";
