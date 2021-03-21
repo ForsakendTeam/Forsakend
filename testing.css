@@ -66,18 +66,21 @@ h1 {
 
 #gameover a,
 #setting a,
+#howtoplay a,
 #menu a {
   display: block;
 }
 
 #gameover a,
 #setting a:hover,
+#howtoplay a:hover,
 #menu a:hover {
   cursor: pointer;
 }
 
 #gameover a:hover::before,
 #setting a:hover::before,
+#howtoplay a:hover::before,
 #menu a:hover::before {
   content: ">";
   margin-right: 10px;
@@ -178,6 +181,34 @@ h1 {
 }
 
 #setting input:checked+label {
+  background-color: #FFF;
+  color: #000;
+}
+
+/* How To Play Screen Style */
+
+#howtoplay {
+  display: none;
+  width: 340px;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 30px;
+  color: #FFF;
+}
+
+#howtoplay p {
+  margin-top: 25px;
+  font-size: 20px;
+    
+}
+#howtoplay h2 {
+  margin-bottom: 15px;
+}
+
+#howtoplay input:checked+label {
   background-color: #FFF;
   color: #000;
 }
