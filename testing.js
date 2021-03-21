@@ -32,6 +32,7 @@
   var button_newgame_menu;
   var button_newgame_setting;
   var button_newgame_gameover;
+  var button_newgame_howtoplay;    
   var button_setting_menu;
   var button_setting_gameover;
   var button_howtoplay_menu;    
