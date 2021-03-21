@@ -258,6 +258,7 @@
   // 1 for the main menu
   // 2 for the settings screen
   // 3 for the game over screen
+  // 4 for the howtoplay screen  
   var showScreen = function(screen_opt) {
     switch (screen_opt) {
 
@@ -271,8 +272,7 @@
       case 1:
         screen_snake.style.display = "none";
         screen_menu.style.display = "block";
-        screen_setting.style.display = "none";
-        screen_howtoplay.style.display = "none";     
+        screen_setting.style.display = "none";  
         screen_gameover.style.display = "none";
         break;
 
@@ -286,10 +286,16 @@
       case 3:
         screen_snake.style.display = "none";
         screen_menu.style.display = "none";
-        screen_setting.style.display = "none";
-        screen_howtoplay.style.display = "none";     
+        screen_setting.style.display = "none";  
         screen_gameover.style.display = "block";
-        break;        
+        break;    
+      case 4:
+        screen_snake.style.display = "none";
+        screen_menu.style.display = "none";
+        screen_setting.style.display = "none";  
+        screen_gameover.style.display = "none";
+        screen_howtoplay.style.display = "block";            
+        break;            
     }
   }
 
@@ -312,8 +318,7 @@
     button_newgame_setting = document.getElementById("newgame_setting");
     button_howtoplay_menu = document.getElementById("howtoplay_menu");      
     button_setting_menu = document.getElementById("setting_menu");
-    button_setting_gameover = document.getElementById("setting_gameover");
-    button_setting_howtoplay = document.getElementById("setting_howtoplay");       
+    button_setting_gameover = document.getElementById("setting_gameover");    
 
     // etc
     ele_score = document.getElementById("score_value");
@@ -333,16 +338,13 @@
     };     
     button_setting_menu.onclick = function() {
       showScreen(2);
-    };
-    button_howtoplay_menu.onclick = function() {
-      showScreen(2);
-    };      
+    };  
     button_setting_gameover.onclick = function() {
       showScreen(2)
     };
-    button_setting_howtoplay.onclick = function() {
-      showScreen(2)
-    };
+    button_howtoplay_menu.onclick = function() {
+      showScreen(4);
+    };          
     setSnakeSpeed(150);
     setWall(1);
 
