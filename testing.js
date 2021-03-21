@@ -31,8 +31,7 @@
   var screen_howtoplay;    
   var button_newgame_menu;
   var button_newgame_setting;
-  var button_newgame_gameover;
-  var button_howtoplay_gameover;    
+  var button_newgame_gameover;  
   var button_setting_menu;
   var button_setting_gameover;
   var button_setting_howtoplay;      
