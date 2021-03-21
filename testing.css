@@ -208,6 +208,14 @@ h1 {
   margin-bottom: 15px;
 }
 
+#setting input {
+  display: none;
+}
+
+#setting label {
+  cursor: pointer;
+}
+
 #howtoplay input:checked+label {
   background-color: #FFF;
   color: #000;
