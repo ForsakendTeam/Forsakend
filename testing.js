@@ -31,8 +31,7 @@
   var screen_howtoplay;    
   var button_newgame_menu;
   var button_newgame_setting;
-  var button_newgame_gameover;
-  var button_newgame_howtoplay;    
+  var button_newgame_gameover;  
   var button_setting_menu;
   var button_setting_gameover;   
   var button_howtoplay_menu;
@@ -321,8 +320,7 @@
 
     // Buttons
     button_newgame_menu = document.getElementById("newgame_menu");
-    button_newgame_setting = document.getElementById("newgame_setting");
-    button_newgame_howtoplay = document.getElementById("newgame_howtoplay");      
+    button_newgame_setting = document.getElementById("newgame_setting");    
     button_setting_menu = document.getElementById("setting_menu");
     button_setting_gameover = document.getElementById("setting_gameover");  
     button_howtoplay_menu = document.getElementById("howtoplay_menu");
@@ -343,10 +341,7 @@
     };
     button_newgame_setting.onclick = function() {
       newGame();
-    };
-    button_newgame_howtoplay.onclick = function() {
-      newGame();
-    };         
+    };       
     button_setting_menu.onclick = function() {
       showScreen(2);
     };  
