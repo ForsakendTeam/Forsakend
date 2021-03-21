@@ -319,7 +319,7 @@
     // Buttons
     button_newgame_menu = document.getElementById("newgame_menu");
     button_newgame_setting = document.getElementById("newgame_setting");
-    button_howtoplay_menu = document.getElementById("howtoplay_menu");      
+    button_howtoplay = document.getElementById("howtoplay");      
     button_setting_menu = document.getElementById("setting_menu");
     button_setting_gameover = document.getElementById("setting_gameover");    
 
@@ -345,7 +345,7 @@
     button_setting_gameover.onclick = function() {
       showScreen(2)
     };
-    button_howtoplay_menu.onclick = function() {
+    button_howtoplay.onclick = function() {
       showScreen(4);
     };          
     setSnakeSpeed(150);
