@@ -63,16 +63,27 @@ body {
 
 <script>
 function openNav() {
-  document.getElementById("mySidenav30").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "250px";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav30").style.width = "0";
+  document.getElementById("mySidenav").style.width = "0";
 }
 </script>
    
 </body>
+  
+<style>
+
+hr.new4 {
+  border: 1px solid red;
+}
+
+</style>
+<hr class="new4">    
+    
 <br>
+    
 <html>
 <head>
   <meta charset="UTF-8">
@@ -990,17 +1001,11 @@ function closeNav() {
 <!-- pop-up with information about the game and the author-->
 <div class="scrim" id="info">
   <div class="box">
-    <h1>About</h1>
-    <div>
-      <p>Snakes and Ladders is an ancient Indian board game regarded today as a worldwide classic. A number of 'ladders' and 'snakes' are pictured on the board, each connecting two specific board squares. The object of the game is to navigate one's game piece, according to die rolls, from the start (bottom square) to the finish (top square), helped or hindered by ladders and snakes respectively.<sup><a href="https://en.wikipedia.org/wiki/Snakes_and_Ladders" target="_blank">[1]</a></sup></p>
-      <p>This version was developed by <a href="https://github.com/alvaromontoro" target="_blank">Alvaro Montoro </a>using HTML and CSS, to practice Pug and Sass, and without any JavaScript line of code.</p>
-      <p>The idea behind this project is that many classic board games are actually Finite-State Machines (FSM), so they can be recreated simulating the states of the automaton with radio buttons, labels, and some CSS styling.</p>
       <p>
         <label id="close-button" for="show-info">Close</label>
       </p>
     </div>
   </div>
-</div>
 <!-- animated instructions section-->
 <div id="instructions">
   <label id="go-to-game" for="game-time">SKIP INSTRUCTIONS &rsaquo;</label>
@@ -1970,17 +1975,11 @@ function closeNav() {
 <!-- pop-up with information about the game and the author-->
 <div class="scrim" id="info">
   <div class="box">
-    <h1>About</h1>
-    <div>
-      <p>Snakes and Ladders is an ancient Indian board game regarded today as a worldwide classic. A number of 'ladders' and 'snakes' are pictured on the board, each connecting two specific board squares. The object of the game is to navigate one's game piece, according to die rolls, from the start (bottom square) to the finish (top square), helped or hindered by ladders and snakes respectively.<sup><a href="https://en.wikipedia.org/wiki/Snakes_and_Ladders" target="_blank">[1]</a></sup></p>
-      <p>This version was developed by <a href="https://github.com/alvaromontoro" target="_blank">Alvaro Montoro </a>using HTML and CSS, to practice Pug and Sass, and without any JavaScript line of code.</p>
-      <p>The idea behind this project is that many classic board games are actually Finite-State Machines (FSM), so they can be recreated simulating the states of the automaton with radio buttons, labels, and some CSS styling.</p>
       <p>
         <label id="close-button" for="show-info">Close</label>
       </p>
     </div>
   </div>
-</div>
 <!-- animated instructions section-->
 <div id="instructions">
   <label id="go-to-game" for="game-time">SKIP INSTRUCTIONS &rsaquo;</label>
@@ -2341,6 +2340,4 @@ function closeNav() {
 </div>
 <!-- partial -->
   <script  src="./SnakeandLaddersscript.js"></script>
-
-</body>
 </html>
