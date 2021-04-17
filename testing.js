@@ -39,10 +39,10 @@
   var ele_score;
   var speed_setting;
   var wall_setting;
-  var snake_textures = new Array(5);
+  var snake_textures = new Array(51);
   var scale = 20;
  
-  for(var i=0; i < 5; i++){
+  for(var i=0; i < 51; i++){
     snake_textures[i] = new Image();
     var index = i+1;
     snake_textures[i].src = 'snaketextures/SnakePart' + index + '.png';
