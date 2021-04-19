@@ -1,42 +1,133 @@
-<html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - Pure CSS Game Rock Paper Scissor</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px'><link rel="stylesheet" href="./RPS.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
+
+<div id="mySidenav" class="sidenav sidenav-fixed-top">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <li><a href="./index.html">Home Page</a></li>   
+  <li><a href="./Games.html">Snake</a></li>
+  <li><a href="./SpeedTyping.html">Speed Typing</a></li>
+  <li><a href="./type.html">Guess Typing</a></li>
+  <li><a href="./SnakeandLadders.html">Snake and Ladders</a></li>   
+  <li><a href="./RPS.html">Rock Paper Scissors</a></li>      
+</div>
+
+<span style="font-size:30px;cursor:pointer;margin-left: 45%" onclick="openNav()">&#9776; Inspirational Games</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+</body>  
 <form>
-  <input class="you" id="you-1" name="you" type="radio" /><input class="you" id="you-2" name="you" type="radio" /><input class="you" id="you-3" name="you" type="radio" /><input class="skynet" id="skynet-1" name="skynet" type="radio" /><input class="skynet" id="skynet-2" name="skynet" type="radio" /><input class="skynet" id="skynet-3" name="skynet" type="radio" />
-  <div class="options">
-    <label class="r" for="you-1"></label><label class="p" for="you-2"></label><label class="s" for="you-3"></label>
-  </div>
-  <div class="game">
-    <div class="go">
-      <label for="skynet-1"></label><label for="skynet-2"></label><label for="skynet-3"></label>
+<link rel="stylesheet" href="./RPS.css">
+  <input type="radio" id="rock-rock" name="rock-paper-scissors">
+  <input type="radio" id="rock-paper" name="rock-paper-scissors">
+  <input type="radio" id="rock-scissors" name="rock-paper-scissors">
+  <input type="radio" id="paper-rock" name="rock-paper-scissors">
+  <input type="radio" id="paper-paper" name="rock-paper-scissors">
+  <input type="radio" id="paper-scissors" name="rock-paper-scissors">
+  <input type="radio" id="scissors-rock" name="rock-paper-scissors">
+  <input type="radio" id="scissors-paper" name="rock-paper-scissors">
+  <input type="radio" id="scissors-scissors" name="rock-paper-scissors">
+
+  <div>
+    <h1>Rock Paper Scissors - Emoji Hands Edition!</h1>
+    <div id="hands">
+      <div class="hand" id="computer-hand">
+        <div class="fist"></div>
+        <div class="finger finger-1"></div>
+        <div class="finger finger-2"></div>
+        <div class="finger finger-3"></div>
+        <div class="finger finger-4"></div>
+        <div class="thumb"></div>
+        <div class="arm"></div>
+      </div>
+
+      <div class="hand" id="user-hand">
+        <div class="fist"></div>
+        <div class="finger finger-1"></div>
+        <div class="finger finger-2"></div>
+        <div class="finger finger-3"></div>
+        <div class="finger finger-4"></div>
+        <div class="thumb"></div>
+        <div class="arm"></div>
+      </div>
+      
+      <div id="icons">
+        <div>
+          <label for="rock-rock">✊</label>
+          <label for="paper-rock">✊</label>
+          <label for="scissors-rock">✊</label>
+        </div>
+        <div>
+          <label for="rock-paper">🖐️</label>
+          <label for="paper-paper">🖐️</label>
+          <label for="scissors-paper">🖐️</label>
+        </div>
+        <div>
+          <label for="rock-scissors">✌</label>
+          <label for="paper-scissors">✌</label>
+          <label for="scissors-scissors">✌</label>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="it">
-    <div class="r"></div>
-    <div class="p"></div>
-    <div class="s"></div>
+
+  <div id="message">
+    <h2></h2>
+    <input type="reset" value="Refresh Round" />
   </div>
-  <div class="results">
-    <div class="win">
-      Win
-    </div>
-    <div class="lose">
-      Lose
-    </div>
-    <div class="tie">
-      Tie
-    </div>
-    <button type="reset">Again</button>
-  </div>
+
 </form>
-<!-- partial -->
-  
-</body>
-</html>
