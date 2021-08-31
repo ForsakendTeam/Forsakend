@@ -1,55 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+    
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav sidenav-fixed-top">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <li><a href="./index.html">Home Page</a></li>   
+  <li><a href="./chris.html">ItsKingChris</a></li>
+  <li><a href="./mineunity.html">MineUnity</a></li>
+  <li><a href="./luckyPrison.html">LuckyPrison</a></li>  
+  <li><a href="./adamsheey.html">AdamSheey</a></li>
+  <li><a href="./blitz.html">Blitz Bot</a></li> 
+  <li><a href="./jtom.html">Jtom4000</a></li> 
+  <li><a href="./rocketleaguemarket.html">Rocket League Market</a></li>
+  <li><a href="./goldmine.html">Goldmine</a></li> 
+  <li><a href="./pringys.html">Pringys</a></li> 
+  <li><a href="./bowshot.html">Bowshot</a></li> 
+  <li><a href="./schoolofstaffpodcast.html">School Of Staff Podcast</a></li>   
+</div>
+
+<span style="font-size:30px;cursor:pointer;margin-left: 40%;color: white" onclick="openNav()">&#9776; Inspirational Games</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+</body>    
+    
 <head>
   <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Made by Forsakend INC" name="author">
+  <title>Word Guessing Game</title>
+  <meta name="viewport" content="width=device-width"><link rel="author" href="https://google.com/+natewiley"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'><link rel="stylesheet" href="./typestyle.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon">
-
-
-<link href="./main.3f6952e4.css" rel="stylesheet"></head>
-
-<body class="minimal">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-
-
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-inverse">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="Home Page">01 : Home Page</a></li>
-          <li><a href="./About-Us.html" title="About Page">02 : About Us</a></li>
-          <li><a href="./Merchandise.html" title="Merchandise Page">03 : Merchandise</a></li>
-          <li><a href="./HomeGames.html" title="Games Page">04 : Inspiring Games</a></li>   
-          <li><a href="./partner.html" title="Partners Page">5 : Partners</a></li>       
-          <li><a href="./Forum.html" title="Forums Page">06 : Forum</a></li>
-          <li><a href="./Contact-Us.html" title="Contact Page">07 : Contact Us</a></li>
-          </ul>
-
-      </div> 
-    </div>
-  </nav>
-</header> 
-    
+</head>  
     
     
 <style>
