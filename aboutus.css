@@ -1,0 +1,210 @@
+/*
+        * Project Griffin.
+        * Author: Masagwadi Maluleke
+        */
+
+
+        /*
+        @font-face {
+        font-family: myFirstFont;
+        src: url(sansation_light.woff);
+        }
+        */
+
+
+        /* #GLOBAL*/
+
+
+        /*basic reset*/
+
+        * 
+
+        /*text colors*/
+
+        .tc-dark-orange {
+            color: #E44D26;
+        }
+
+        .tc-blue {
+            color: #0170BA;
+        }
+
+        .tc-orange {
+            color: #F58232;
+        }
+
+        .tc-light-purple {
+            color: #6C7EB7;
+        }
+
+
+        /*background colors*/
+
+        .bg-dark-orange {
+            background-color: #E44D26;
+        }
+
+        .bg-blue {
+            background-color: #0170BA;
+        }
+
+        .bg-orange {
+            background-color: #F58232;
+        }
+
+        .bg-light-purple {
+            background-color: #6C7EB7;
+        }
+
+
+        /*fonts*/
+
+        .lobster {
+            font-family: 'Lobster Two', cursive;
+        }
+
+        .rambla {
+            font-family: 'Rambla', sans-serif;
+        }
+
+
+        /*#GRIDS*/
+
+        .grid-x5--cards {
+            width: 20.5%;
+            display: inline-block;         
+            vertical-align: top;
+            margin-bottom: 10px;
+        }
+
+        .grid-x5--cards {
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 10px;
+        }
+
+        .cards-cover {
+            display: block;
+            width: 90%;
+            padding-left: 100px;
+            min-height: 410px;
+            position: relative;
+        }
+
+        .cards-cover .grid-x5--cards:nth-child(1) {
+            position: absolute;
+            display: block;
+            margin-top: 30px;
+            margin: 50 auto;            
+            left: 0;
+            z-index: 1;
+            transition: all 350ms;
+        }
+
+        .cards-cover .grid-x5--cards:nth-child(2) {
+            position: absolute;
+            margin-top: 20px;
+            left: 22%;
+            z-index: 2;
+            transform: scale(1.05);
+            transition: all 350ms;
+        }
+
+        .cards-cover .grid-x5--cards:nth-child(3) {
+            position: absolute;
+            margin-top: 10px;
+            left: 47%;
+            z-index: 3;
+            transform: scale(1.09);
+            transition: all 350ms;
+        }
+
+        .cards-cover .grid-x5--cards:nth-child(4) {
+            position: absolute;
+            margin-top: 20px;
+            left: 72%;
+            z-index: 2;
+            transform: scale(1.05);
+            transition: all 350ms;
+        }
+
+        .cards-cover .grid-x5--cards:nth-child(5) {
+            position: absolute;
+            margin-top: 30px;
+            left: 94%;
+            z-index: 5;
+            transition: all 350ms;
+        }
+
+        .cards {
+            vertical-align: top;
+            transition: all 750ms;
+            border: 5px solid #4a4a4a;
+            min-height: 300px;
+            margin-right: 10%;
+            overflow: hidden;
+            font-size: 14px;
+            position: absolute;
+            transition: all 350ms;
+            background-color: #fff;
+            border-radius: 10px;
+
+        }
+
+        .cards p {
+            padding: 10px;
+            margin-bottom: 35px;
+            text-align: center;
+            color: #000;
+        }
+
+        .cards img {
+            width: 100%;
+            object-fit: cover;
+            transform-origin: center center;
+            margin: 0 auto;
+            display: block;
+            border-bottom: 0px solid currentColor;
+            transition: all 350ms;
+        }
+
+        .cards h2 {
+            text-align: center;
+            font-family: 'Lobster Two', cursive;
+            transition: all 350ms;
+            color: currentColor;
+        }
+
+        .cards a {
+            text-decoration: none;
+            padding: 5px 10px;
+            text-align: center;
+            color: white;
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            transition: all 350ms;
+        }
+
+        .cards-cover .grid-x5--cards:hover, .cards:hover {
+            box-shadow: 0 10px 15px 6px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            z-index: 30000;
+            border-color: currentColor;
+        }
+
+        .cards:hover img {
+            filter: brightness(110%);
+            border-bottom: 8px solid currentColor;
+            width: 102%;
+        }
+
+        .cards:hover h2 {
+            transform: scale(1.1);
+        }
+
+        .cards:hover a {
+            box-shadow: -1px 0px 15px 6px rgba(0, 0, 0, 0.3) inset;
+        }
+
