@@ -3,7 +3,7 @@ var VERSION = 'v0.0.2'
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
   '/emoji-minesweeper/',
-  '/emoji-minesweeper/index',
+  '/emoji-minesweeper/index.html',
   '/emoji-minesweeper/game.js',
   '/emoji-minesweeper/twemoji.js'
 
