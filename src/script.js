@@ -117,7 +117,7 @@ Fonts from Google Fonts
         frag += "<li data-pos='" +  key  + "' class='letter'>*</li>";
       });
       frag += "</ul>";
-      this.guess.html(frag);
+      this.guess(frag);
     },
 
 
@@ -134,7 +134,7 @@ Fonts from Google Fonts
         frag = "";
       }
 
-      this.wrong.html(frag);
+      this.wrong(frag);
     },
 
 
@@ -157,7 +157,7 @@ Fonts from Google Fonts
       _.correct = _.correct += letters.length;
       $.each(letters, function(key, val){
         var letter = $("li[data-pos=" +val.pos+ "]");
-        letter.html(val.letter);
+        letter(val.letter);
         letter.addClass("correct");
 
         if(_.correct  == _.wrd.letters.length){
@@ -232,9 +232,9 @@ Fonts from Google Fonts
 
     win: function(){
       var rating = this.rating();
-      this.msgTitle.html("Awesome, You Won!");
+      this.msgTitle("Awesome, You Won!");
       // this is messy
-      this.msgText.html("You solved the word in <span class='highlight'>" + rating.guesses + "</span> Guesses!<br>Score: <span class='highlight'>" + rating.rating + "%</span>");
+      this.msgText("You solved the word in <span class='highlight'>" + rating.guesses + "</span> Guesses!<br>Score: <span class='highlight'>" + rating.rating + "%</span>");
       this.showMsg();
       this.playSound("winSound");
 
@@ -242,8 +242,8 @@ Fonts from Google Fonts
 
 
     lose: function(){
-      this.msgTitle.html("You Lost.. The word was <span class='highlight'>"+ this.wrd.word +"</span>");
-      this.msgText.html("Don't worry, you'll get the next one!");
+      this.msgTitle("You Lost.. The word was <span class='highlight'>"+ this.wrd.word +"</span>");
+      this.msgText("Don't worry, you'll get the next one!");
       this.showMsg();
       this.playSound("loseSound");
     }
